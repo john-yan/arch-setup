@@ -9,7 +9,7 @@ makepkg -si --noconfim
 cd ~
 
 # install fonts
-yay -S ttf-meslo-nerd-font-powerlevel10k
+yay -S --noconfirm ttf-meslo-nerd-font-powerlevel10k
 
 # configure zsh
 git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
