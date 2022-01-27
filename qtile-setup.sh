@@ -6,7 +6,7 @@ USERNAME=johnyan
 bash ./user-setup.sh $USERNAME
 
 # yay setup
-sudo $USERNAME bash ./yay-setup.sh
+sudo -u $USERNAME bash ./yay-setup.sh
 
 # install packages
 yay -Syu --needed --noconfirm \
