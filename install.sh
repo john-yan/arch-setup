@@ -32,7 +32,7 @@ chsh -s /bin/zsh johnyan
 sed -i 's/#display-setup-script=/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/' /etc/lightdm/lightdm.conf
 
 # configure auto login
-sed -i 's/#autologin-guess=false/autologin-guess=false/' /etc/lightdm/lightdm.conf
+sed -i 's/#autologin-guest=false/autologin-guest=false/' /etc/lightdm/lightdm.conf
 sed -i 's/#autologin-user=/autologin-user=johnyan/' /etc/lightdm/lightdm.conf
 sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
 groupadd -r autologin
