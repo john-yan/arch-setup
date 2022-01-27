@@ -2,7 +2,7 @@
 
 # install yay
 cd ~
-pacman -Syu --needed --noconfirm base-devel git
+sudo pacman -Syu --needed --noconfirm base-devel git
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
 makepkg -si --noconfirm
