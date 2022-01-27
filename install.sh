@@ -5,7 +5,7 @@ useradd -mG wheel johnyan
 echo -e "johnyan\njohnyan" | passwd johnyan
 
 # install packages
-pacman -Syu --needed --noconfim sudo \
+pacman -Syu --needed --noconfirm sudo \
                               base-devel \
                               zsh \
                               git \
