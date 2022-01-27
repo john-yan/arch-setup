@@ -4,7 +4,7 @@
 cd ~
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
-makepkg -si --noconfim
+makepkg -si --noconfirm
 
 cd ~
 
