@@ -51,7 +51,7 @@ dirs=/usr/share/backgrounds/archlinux;
 EOF
 
 # configure terminal
-cat > .config/xfce4/ternimal/terminalrc << "EOF"
+cat > .config/xfce4/terminal/terminalrc << "EOF"
 [Configuration]
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
