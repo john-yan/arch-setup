@@ -2,15 +2,14 @@
 
 USERNAME=johnyan
 
-# create user
-bash ./create_user.sh $USERNAME
+# user setup
+bash ./user-setup.sh $USERNAME
+
+# yay setup
+bash ./yay-setup.sh
 
 # install packages
-pacman -Syu --needed --noconfirm \
-  sudo \
-  base-devel \
-  zsh \
-  git \
+yay -Syu --needed --noconfirm \
   lightdm \
   xorg \
   xorg-server \
@@ -22,13 +21,11 @@ pacman -Syu --needed --noconfirm \
   archlinux-wallpaper \
   lightdm-gtk-greeter \
   openssh \
-  vim
+  vim \
+  ttf-meslo-nerd-font-powerlevel10k
 
-# enable sudo for user
-echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-# change default shell to zsh
-chsh -s /bin/zsh $USERNAME
+# yay cleanup
+yay -Scc --noconfirm
 
 # configure display
 sed -i 's/#display-setup-script=/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/' /etc/lightdm/lightdm.conf

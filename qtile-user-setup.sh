@@ -1,15 +1,6 @@
 #!/bin/bash
 
-# install yay
 cd ~
-git clone https://aur.archlinux.org/yay-bin
-cd yay-bin
-makepkg -si --noconfirm
-
-cd ~
-
-# install fonts
-yay -S --noconfirm ttf-meslo-nerd-font-powerlevel10k
 
 # configure zsh
 git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
