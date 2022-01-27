@@ -25,7 +25,7 @@ yay -Syu --needed --noconfirm \
   ttf-meslo-nerd-font-powerlevel10k
 
 # yay cleanup
-yay -Scc --noconfirm
+echo yes | yay -Scc
 
 # configure display
 sed -i 's/#display-setup-script=/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/' /etc/lightdm/lightdm.conf
