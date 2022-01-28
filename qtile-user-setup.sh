@@ -5,13 +5,16 @@ cd ~
 # sogou setup
 bash sogou_setup.sh
 
+cat > .xprofile << 'EOF'
+nitrogen --restore
+picom -b
+fcitx -d
+EOF
+
 # configure zsh
 git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
 cp .oh-my-zsh/zshrc ~/.zshrc
 cp .oh-my-zsh/p10k.zsh ~/.p10k.zsh
-
-echo "nitrogen --restore" > .xprofile
-echo "picom -f &"  >> .xprofile
 
 # create config directory
 mkdir -p .config/{qtile,nitrogen,xfce4}
