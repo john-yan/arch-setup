@@ -26,6 +26,9 @@ yay -Syu --needed --noconfirm \
   adobe-source-han-sans-cn-fonts \
   adobe-source-han-serif-cn-fonts
 
+# locale setup
+bash locale-setup.sh
+
 # yay cleanup
 echo yes | yay -Scc
 
