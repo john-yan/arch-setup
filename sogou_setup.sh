@@ -2,7 +2,7 @@
 
 cd ~
 
-yay -S fcitx fcitx-configtool fcitx-sogoupinyin
+yay -S --needed --noconfirm fcitx fcitx-configtool fcitx-sogoupinyin
 
 cat > ~/.pam_environment << "EOF"
 GTK_IM_MODULE DEFAULT=fcitx
