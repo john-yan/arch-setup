@@ -11,6 +11,8 @@ sudo -u $USERNAME bash ./yay-setup.sh
 # install packages
 yay -Syu --needed --noconfirm \
   lightdm \
+  lightdm-gtk-greeter \
+  accountsservice \
   xorg \
   xorg-server \
   qtile \
@@ -19,7 +21,6 @@ yay -Syu --needed --noconfirm \
   xfce4-terminal \
   picom \
   archlinux-wallpaper \
-  lightdm-gtk-greeter \
   openssh \
   vim \
   ttf-meslo-nerd-font-powerlevel10k \
