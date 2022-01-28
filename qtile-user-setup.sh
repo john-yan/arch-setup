@@ -1,38 +1,36 @@
 #!/bin/bash
 
-cd ~
-
 # sogou setup
 bash sogou_setup.sh
 
-cat > .xprofile << 'EOF'
+cat > ~/.xprofile << 'EOF'
 nitrogen --restore
 picom -b
 fcitx -d
 EOF
 
 # configure zsh
-git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
-cp .oh-my-zsh/zshrc ~/.zshrc
-cp .oh-my-zsh/p10k.zsh ~/.p10k.zsh
+git clone --recursive https://github.com/john-yan/ohmyzsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/zshrc ~/.zshrc
+cp ~/.oh-my-zsh/p10k.zsh ~/.p10k.zsh
 
 # create config directory
-mkdir -p .config/{qtile,nitrogen,xfce4}
-mkdir -p .config/xfce4/terminal/
+mkdir -p ~/.config/{qtile,nitrogen,xfce4}
+mkdir -p ~/.config/xfce4/terminal/
 
 # configure picom
-cp /etc/xdg/picom.conf .config/picom.conf
-sed -i 's/vsync = true/vsync = false/' .config/picom.conf
+cp /etc/xdg/picom.conf ~/.config/picom.conf
+sed -i 's/vsync = true/vsync = false/' ~/.config/picom.conf
 
 # configure nitrogen
-cat > .config/nitrogen/bg-saved.cfg << "EOF"
+cat > ~/.config/nitrogen/bg-saved.cfg << "EOF"
 [xin_-1]
 file=/usr/share/backgrounds/archlinux/landscape.jpg
 mode=4
 bgcolor=#000000
 EOF
 
-cat > .config/nitrogen/nitrogen.cfg << "EOF"
+cat > ~/.config/nitrogen/nitrogen.cfg << "EOF"
 [geometry]
 posx=960
 posy=0
@@ -48,7 +46,7 @@ dirs=/usr/share/backgrounds/archlinux;
 EOF
 
 # configure terminal
-cat > .config/xfce4/terminal/terminalrc << "EOF"
+cat > ~/.config/xfce4/terminal/terminalrc << "EOF"
 [Configuration]
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
