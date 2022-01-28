@@ -11,3 +11,5 @@ enable_locale "zh_CN.GBK GBK"
 enable_locale "zh_CN.UTF-8 UTF-8"
 enable_locale "zh_CN GB2312"
 
+locale-gen
+
