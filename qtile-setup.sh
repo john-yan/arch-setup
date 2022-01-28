@@ -22,7 +22,9 @@ yay -Syu --needed --noconfirm \
   lightdm-gtk-greeter \
   openssh \
   vim \
-  ttf-meslo-nerd-font-powerlevel10k
+  ttf-meslo-nerd-font-powerlevel10k \
+  adobe-source-han-sans-cn-fonts \
+  adobe-source-han-serif-cn-fonts
 
 # yay cleanup
 echo yes | yay -Scc
