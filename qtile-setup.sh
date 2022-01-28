@@ -16,6 +16,7 @@ yay -Syu --needed --noconfirm \
   xorg \
   xorg-server \
   qtile \
+  python-pip \
   lxappearance \
   nitrogen \
   xfce4-terminal \
@@ -23,6 +24,9 @@ yay -Syu --needed --noconfirm \
   archlinux-wallpaper \
   openssh \
   vim \
+  alsa-utils \
+  pulseaudio \
+  pulseaudio-alsa \
   ttf-meslo-nerd-font-powerlevel10k \
   adobe-source-han-sans-cn-fonts \
   adobe-source-han-serif-cn-fonts
@@ -35,6 +39,9 @@ echo yes | yay -Scc
 
 # configure display
 sed -i 's/#display-setup-script=/display-setup-script=xrandr --output Virtual-1 --mode 1920x1080/' /etc/lightdm/lightdm.conf
+
+# configure audio
+amixer sset Master '50%'
 
 # configure auto login
 sed -i 's/#autologin-guest=false/autologin-guest=false/' /etc/lightdm/lightdm.conf

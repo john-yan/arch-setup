@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# configure qtile
+mkdir -p ~/.config/qtile
+cp qtile-config.py ~/.config/qtile/config.py
+pip install psutil
+
 # sogou setup
 bash sogou_setup.sh
 
