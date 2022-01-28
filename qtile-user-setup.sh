@@ -2,6 +2,9 @@
 
 cd ~
 
+# sogou setup
+bash sogou_setup.sh
+
 # configure zsh
 git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
 cp .oh-my-zsh/zshrc ~/.zshrc
