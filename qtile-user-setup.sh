@@ -10,7 +10,8 @@ fcitx -d
 EOF
 
 # configure zsh
-git clone --recursive https://github.com/john-yan/ohmyzsh.git ~/.oh-my-zsh
+cd ~
+git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
 cp ~/.oh-my-zsh/zshrc ~/.zshrc
 cp ~/.oh-my-zsh/p10k.zsh ~/.p10k.zsh
 
