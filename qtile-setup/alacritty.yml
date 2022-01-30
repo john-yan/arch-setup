@@ -360,7 +360,7 @@ schemes:
   OceanicNext: &OceanicNext
     # Default colors
     primary:
-      background: '#1b2b34'
+      background: '#121c29'
       foreground: '#d8dee9'
 
     # Colors the cursor will use if `custom_cursor_colors` is true
@@ -537,7 +537,7 @@ schemes:
 # *TomorrowNight
 
 # Colors (Tomorrow Night)
-colors: *Dracula
+colors: *OceanicNext
   # Default colors
   #primary:
   #  background: '#1d1f21'
