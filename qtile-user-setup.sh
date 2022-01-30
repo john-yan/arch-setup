@@ -5,6 +5,10 @@ mkdir -p ~/.config/qtile
 cp qtile-config.py ~/.config/qtile/config.py
 pip install psutil
 
+# configure alacritty
+mkdir -p ~/.config/alacritty
+cp alacritty.yml ~/.config/alacritty/alacritty.yml
+
 # sogou setup
 bash sogou_setup.sh
 
@@ -27,6 +31,11 @@ mkdir -p ~/.config/xfce4/terminal/
 # configure picom
 cp /etc/xdg/picom.conf ~/.config/picom.conf
 sed -i 's/vsync = true/vsync = false/' ~/.config/picom.conf
+cat >> ~/.config/picom.conf << EOF
+opacity-rule = [
+    "80:class_g = 'Alacritty'",
+];
+EOF
 
 # configure nitrogen
 cat > ~/.config/nitrogen/bg-saved.cfg << "EOF"

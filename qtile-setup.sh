@@ -20,6 +20,7 @@ yay -Syu --needed --noconfirm \
   lxappearance \
   nitrogen \
   xfce4-terminal \
+  alacritty \
   picom \
   archlinux-wallpaper \
   openssh \
