@@ -1,12 +1,17 @@
 #!/bin/bash
 
-USERNAME=johnyan
+export USERNAME=johnyan
+export HELPER_DIR=$(pwd)/helpers
+export QTILE_SETUP_DIR=$(pwd)/qtile-setup
 
 # user setup
-bash ./user-setup.sh $USERNAME
+bash $HELPER_DIR/user-setup.sh $USERNAME
+
+# locale setup
+bash $HELPER_DIR/locale-setup.sh
 
 # yay setup
-sudo -u $USERNAME bash ./yay-setup.sh
+sudo -u $USERNAME bash $HELPER_DIR/yay-setup.sh
 
 # install packages
 yay -Syu --needed --noconfirm \
@@ -32,9 +37,6 @@ yay -Syu --needed --noconfirm \
   adobe-source-han-sans-cn-fonts \
   adobe-source-han-serif-cn-fonts
 
-# locale setup
-bash locale-setup.sh
-
 # yay cleanup
 echo yes | yay -Scc
 
@@ -58,4 +60,6 @@ systemctl enable lightdm.service
 systemctl enable sshd.service
 
 # user setup
+cd $QTILE_SETUP_DIR
 sudo -u $USERNAME /bin/bash qtile-user-setup.sh
+

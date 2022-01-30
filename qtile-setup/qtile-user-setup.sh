@@ -1,17 +1,20 @@
 #!/bin/bash
 
+# create config directory
+mkdir -p ~/.config/{qtile,nitrogen,xfce4,alacritty}
+mkdir -p ~/.config/xfce4/terminal/
+
 # configure qtile
-mkdir -p ~/.config/qtile
 cp qtile-config.py ~/.config/qtile/config.py
 pip install psutil
 
 # configure alacritty
-mkdir -p ~/.config/alacritty
 cp alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # sogou setup
-bash sogou_setup.sh
+bash $HELPER_DIR/sogou_setup.sh
 
+# configure xprofile
 cat > ~/.xprofile << 'EOF'
 nitrogen --restore
 picom -b
@@ -23,10 +26,6 @@ cd ~
 git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
 cp ~/.oh-my-zsh/zshrc ~/.zshrc
 cp ~/.oh-my-zsh/p10k.zsh ~/.p10k.zsh
-
-# create config directory
-mkdir -p ~/.config/{qtile,nitrogen,xfce4}
-mkdir -p ~/.config/xfce4/terminal/
 
 # configure picom
 cp /etc/xdg/picom.conf ~/.config/picom.conf
