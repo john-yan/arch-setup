@@ -15,6 +15,9 @@ bash $HELPER_DIR/sogou_setup.sh
 bash $HELPER_DIR/vim_setup.sh
 bash $HELPER_DIR/zsh_setup.sh
 
+# configure gtk theme
+bash $HELPER_DIR/theme_setup.sh
+
 # configure xprofile
 cat > ~/.xprofile << 'EOF'
 nitrogen --restore
@@ -26,9 +29,11 @@ EOF
 cp /etc/xdg/picom.conf ~/.config/picom.conf
 sed -i 's/vsync = true/vsync = false/' ~/.config/picom.conf
 cat >> ~/.config/picom.conf << EOF
+
 opacity-rule = [
     "90:class_g = 'Alacritty'",
 ];
+
 EOF
 
 # configure nitrogen
