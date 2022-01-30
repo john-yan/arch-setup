@@ -61,5 +61,5 @@ systemctl enable sshd.service
 
 # user setup
 cd $QTILE_SETUP_DIR
-sudo -u $USERNAME /bin/bash qtile-user-setup.sh
+sudo -u $USERNAME -E HELPER_DIR -E QTILE_SETUP_DIR /bin/bash qtile-user-setup.sh
 
