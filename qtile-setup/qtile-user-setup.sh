@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # create config directory
-mkdir -p ~/.config/{qtile,nitrogen,xfce4,alacritty}
-mkdir -p ~/.config/xfce4/terminal/
+mkdir -p ~/.config/{qtile,nitrogen,alacritty}
 
 # configure qtile
 cp qtile-config.py ~/.config/qtile/config.py
@@ -11,8 +10,10 @@ pip install psutil
 # configure alacritty
 cp alacritty.yml ~/.config/alacritty/alacritty.yml
 
-# sogou setup
+# configure sogou, vim and zsh
 bash $HELPER_DIR/sogou_setup.sh
+bash $HELPER_DIR/vim_setup.sh
+bash $HELPER_DIR/zsh_setup.sh
 
 # configure xprofile
 cat > ~/.xprofile << 'EOF'
@@ -20,12 +21,6 @@ nitrogen --restore
 picom -b
 fcitx -d
 EOF
-
-# configure zsh
-cd ~
-git clone --recursive https://github.com/john-yan/ohmyzsh.git .oh-my-zsh
-cp ~/.oh-my-zsh/zshrc ~/.zshrc
-cp ~/.oh-my-zsh/p10k.zsh ~/.p10k.zsh
 
 # configure picom
 cp /etc/xdg/picom.conf ~/.config/picom.conf
@@ -59,42 +54,43 @@ icon_caps=false
 dirs=/usr/share/backgrounds/archlinux;
 EOF
 
-# configure terminal
-cat > ~/.config/xfce4/terminal/terminalrc << "EOF"
-[Configuration]
-MiscAlwaysShowTabs=FALSE
-MiscBell=FALSE
-MiscBellUrgent=FALSE
-MiscBordersDefault=TRUE
-MiscCursorBlinks=FALSE
-MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
-MiscDefaultGeometry=80x24
-MiscInheritGeometry=FALSE
-MiscMenubarDefault=FALSE
-MiscMouseAutohide=FALSE
-MiscMouseWheelZoom=TRUE
-MiscToolbarDefault=FALSE
-MiscConfirmClose=TRUE
-MiscCycleTabs=TRUE
-MiscTabCloseButtons=TRUE
-MiscTabCloseMiddleClick=TRUE
-MiscTabPosition=GTK_POS_TOP
-MiscHighlightUrls=TRUE
-MiscMiddleClickOpensUri=FALSE
-MiscCopyOnSelect=FALSE
-MiscShowRelaunchDialog=TRUE
-MiscRewrapOnResize=TRUE
-MiscUseShiftArrowsToScroll=FALSE
-MiscSlimTabs=FALSE
-MiscNewTabAdjacent=FALSE
-MiscSearchDialogOpacity=100
-MiscShowUnsafePasteDialog=TRUE
-ScrollingBar=TERMINAL_SCROLLBAR_NONE
-BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
-BackgroundDarkness=0.800000
-FontName=MesloLGS NF 12
-FontAllowBold=FALSE
-Encoding=UTF-8
-EOF
+## configure terminal
+#mkdir -p ~/.config/xfce4/terminal/
+#cat > ~/.config/xfce4/terminal/terminalrc << "EOF"
+#[Configuration]
+#MiscAlwaysShowTabs=FALSE
+#MiscBell=FALSE
+#MiscBellUrgent=FALSE
+#MiscBordersDefault=TRUE
+#MiscCursorBlinks=FALSE
+#MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+#MiscDefaultGeometry=80x24
+#MiscInheritGeometry=FALSE
+#MiscMenubarDefault=FALSE
+#MiscMouseAutohide=FALSE
+#MiscMouseWheelZoom=TRUE
+#MiscToolbarDefault=FALSE
+#MiscConfirmClose=TRUE
+#MiscCycleTabs=TRUE
+#MiscTabCloseButtons=TRUE
+#MiscTabCloseMiddleClick=TRUE
+#MiscTabPosition=GTK_POS_TOP
+#MiscHighlightUrls=TRUE
+#MiscMiddleClickOpensUri=FALSE
+#MiscCopyOnSelect=FALSE
+#MiscShowRelaunchDialog=TRUE
+#MiscRewrapOnResize=TRUE
+#MiscUseShiftArrowsToScroll=FALSE
+#MiscSlimTabs=FALSE
+#MiscNewTabAdjacent=FALSE
+#MiscSearchDialogOpacity=100
+#MiscShowUnsafePasteDialog=TRUE
+#ScrollingBar=TERMINAL_SCROLLBAR_NONE
+#BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+#BackgroundDarkness=0.800000
+#FontName=MesloLGS NF 12
+#FontAllowBold=FALSE
+#Encoding=UTF-8
+#EOF
 
 
