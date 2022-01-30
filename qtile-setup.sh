@@ -24,7 +24,6 @@ yay -Syu --needed --noconfirm \
   python-pip \
   lxappearance \
   nitrogen \
-  # xfce4-terminal \
   alacritty \
   picom \
   archlinux-wallpaper \
@@ -35,7 +34,8 @@ yay -Syu --needed --noconfirm \
   pulseaudio-alsa \
   ttf-meslo-nerd-font-powerlevel10k \
   adobe-source-han-sans-cn-fonts \
-  adobe-source-han-serif-cn-fonts
+  adobe-source-han-serif-cn-fonts \
+  # xfce4-terminal
 
 # yay cleanup
 echo yes | yay -Scc
