@@ -24,7 +24,7 @@ yay -Syu --needed --noconfirm \
   python-pip \
   lxappearance \
   nitrogen \
-  xfce4-terminal \
+  # xfce4-terminal \
   alacritty \
   picom \
   archlinux-wallpaper \
