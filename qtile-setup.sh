@@ -25,6 +25,7 @@ yay -Syu --needed --noconfirm \
   lxappearance \
   nitrogen \
   alacritty \
+  kitty \
   picom \
   archlinux-wallpaper \
   openssh \
@@ -35,6 +36,9 @@ yay -Syu --needed --noconfirm \
   ttf-meslo-nerd-font-powerlevel10k \
   adobe-source-han-sans-cn-fonts \
   adobe-source-han-serif-cn-fonts \
+  noto-fonts-emoji \
+  nerd-fonts-sf-mono \
+  ttf-clear-sans
   # xfce4-terminal
 
 # yay cleanup

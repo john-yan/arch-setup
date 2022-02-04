@@ -1,14 +1,19 @@
 #!/bin/bash
 
 # create config directory
-mkdir -p ~/.config/{qtile,nitrogen,alacritty}
+mkdir -p ~/.config/{qtile,nitrogen,alacritty,kitty}
 
 # configure qtile
 cp qtile-config.py ~/.config/qtile/config.py
 pip install psutil
 
 # configure alacritty
-cp alacritty.yml ~/.config/alacritty/alacritty.yml
+#cp alacritty.yml ~/.config/alacritty/alacritty.yml
+
+# configure kitty
+cp kitty.conf ~/.config/kitty/kitty.conf
+git clone --depth 1 https://github.com/dexpota/kitty-themes.git ~/.config/kitty/kitty-themes
+ln -sf ~/.config/kitty-themes/themes/OceanicMaterial.conf ~/.config/kitty/theme.conf
 
 # configure sogou, vim and zsh
 bash $HELPER_DIR/sogou_setup.sh
@@ -28,13 +33,13 @@ EOF
 # configure picom
 cp /etc/xdg/picom.conf ~/.config/picom.conf
 sed -i 's/vsync = true/vsync = false/' ~/.config/picom.conf
-cat >> ~/.config/picom.conf << EOF
-
-opacity-rule = [
-    "90:class_g = 'Alacritty'",
-];
-
-EOF
+#cat >> ~/.config/picom.conf << EOF
+#
+#opacity-rule = [
+#    "90:class_g = 'Alacritty'",
+#];
+#
+#EOF
 
 # configure nitrogen
 cat > ~/.config/nitrogen/bg-saved.cfg << "EOF"
