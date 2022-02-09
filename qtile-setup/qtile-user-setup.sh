@@ -21,7 +21,7 @@ bash $HELPER_DIR/vim_setup.sh
 bash $HELPER_DIR/zsh_setup.sh
 
 # configure gtk theme
-bash $HELPER_DIR/theme_setup.sh
+bash $HELPER_DIR/theme-setup.sh
 
 # configure xprofile
 cat > ~/.xprofile << 'EOF'
