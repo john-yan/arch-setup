@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ~
-yay -S gnome-themes-extra gtk-engine-murrine sassc
+yay -S --noconfirm gnome-themes-extra gtk-engine-murrine sassc
 echo yes | yay -Scc
 
 git clone https://github.com/vinceliuice/Fluent-gtk-theme.git && \
